@@ -12,12 +12,12 @@ enum E2 {
 enum E3 {
     A(u8),
     B(u16),
-    C(u32),
+    C(u32, u32, u32),
 }
 
 enum E4 {
     B(u16),
-    C(u32),
+    C(u32, u32, u32),
     A(u8),
 }
 

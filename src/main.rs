@@ -1,24 +1,24 @@
 enum E1 {
-    DblVal1(f64),
+    A(u8),
 }
 
 enum E2 {
-    DblVal1(f64),
-    DblVal2(f64),
-    DblVal3(f64),
-    DblVal4(f64),
+    A(u8),
+    B(u16),
 }
 
 enum E3 {
-    A(u8),
-    B(u16),
-    C(u32, u32, u32),
+    A(u16),
 }
 
 enum E4 {
     B(u16),
-    C(u32, u32, u32),
     A(u8),
+}
+
+enum E5 {
+    A,
+    B,
 }
 
 fn main() {
@@ -26,8 +26,9 @@ fn main() {
     println!("Size is {}", std::mem::size_of::<E2>());
     println!("Size is {}", std::mem::size_of::<E3>());
     println!("Size is {}", std::mem::size_of::<E4>());
-    // Size is 8
-    // Size is 16
-    // Size is 8
-    // Size is 8
+    println!("Size is {}", std::mem::size_of::<E5>());
+    // Size is 1
+    // Size is 4
+    // Size is 2
+    // Size is 4
 }
